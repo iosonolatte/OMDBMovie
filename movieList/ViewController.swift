@@ -30,6 +30,7 @@ class ViewController: UIViewController, UICollectionViewDataSource,  UICollectio
             showDialog(title: "Warning", message: "Please enter keyword")
             return
         }
+        movieList = []
         searchKeyWord = keyword.replacingOccurrences(of: " ", with: "%20")
         searchMovie(name: searchKeyWord)
     }

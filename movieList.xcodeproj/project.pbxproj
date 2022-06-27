@@ -13,6 +13,10 @@
 		D2497FFC286897200001DDA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2497FFA286897200001DDA1 /* Main.storyboard */; };
 		D2497FFE286897240001DDA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2497FFD286897240001DDA1 /* Assets.xcassets */; };
 		D2498001286897240001DDA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2497FFF286897240001DDA1 /* LaunchScreen.storyboard */; };
+		D2498009286898150001DDA1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2498008286898150001DDA1 /* Movie.swift */; };
+		D24980112868A0F70001DDA1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D24980102868A0F70001DDA1 /* Alamofire */; };
+		D24980132869277F0001DDA1 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24980122869277F0001DDA1 /* MovieCollectionViewCell.swift */; };
+		D249801628692C660001DDA1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D249801528692C660001DDA1 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		D2497FFD286897240001DDA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2498000286897240001DDA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2498002286897240001DDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2498008286898150001DDA1 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		D24980122869277F0001DDA1 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D249801628692C660001DDA1 /* SDWebImage in Frameworks */,
+				D24980112868A0F70001DDA1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,8 @@
 				D2497FF4286897200001DDA1 /* AppDelegate.swift */,
 				D2497FF6286897200001DDA1 /* SceneDelegate.swift */,
 				D2497FF8286897200001DDA1 /* ViewController.swift */,
+				D2498008286898150001DDA1 /* Movie.swift */,
+				D24980122869277F0001DDA1 /* MovieCollectionViewCell.swift */,
 				D2497FFA286897200001DDA1 /* Main.storyboard */,
 				D2497FFD286897240001DDA1 /* Assets.xcassets */,
 				D2497FFF286897240001DDA1 /* LaunchScreen.storyboard */,
@@ -83,6 +93,10 @@
 			dependencies = (
 			);
 			name = movieList;
+			packageProductDependencies = (
+				D24980102868A0F70001DDA1 /* Alamofire */,
+				D249801528692C660001DDA1 /* SDWebImage */,
+			);
 			productName = movieList;
 			productReference = D2497FF1286897200001DDA1 /* movieList.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,10 @@
 				Base,
 			);
 			mainGroup = D2497FE8286897200001DDA1;
+			packageReferences = (
+				D249800F2868A0F70001DDA1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D249801428692C660001DDA1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = D2497FF2286897200001DDA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +158,8 @@
 			files = (
 				D2497FF9286897200001DDA1 /* ViewController.swift in Sources */,
 				D2497FF5286897200001DDA1 /* AppDelegate.swift in Sources */,
+				D2498009286898150001DDA1 /* Movie.swift in Sources */,
+				D24980132869277F0001DDA1 /* MovieCollectionViewCell.swift in Sources */,
 				D2497FF7286897200001DDA1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +378,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D249800F2868A0F70001DDA1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D249801428692C660001DDA1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D24980102868A0F70001DDA1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D249800F2868A0F70001DDA1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D249801528692C660001DDA1 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D249801428692C660001DDA1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2497FE9286897200001DDA1 /* Project object */;
 }
